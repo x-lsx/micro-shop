@@ -30,7 +30,6 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length = 50, null=True, blank=True,verbose_name="Имя")
     last_name = models.CharField(max_length = 50, null=True, blank=True,verbose_name="Фамилия")
     middle_name = models.CharField(max_length = 50, null=True, blank=True,verbose_name="Отчество")
-    # Сделаем адрес необязательным, чтобы создание пользователя из формы/serializers не падало
     address = models.TextField(blank=True, default='')
     phone = models.CharField(max_length=20, blank=True)
 
